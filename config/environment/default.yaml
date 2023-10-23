@@ -1,0 +1,10 @@
+train:
+  facts_id: ["001", "002", "003", "005", "006", "007"]
+  text_limit: 300
+  requests_file: "data/crisisfacts/trec_events.ipc"
+  mode: train
+test:
+  facts_id: ["008"]
+  text_limit: 300
+  requests_file: "data/crisisfacts/trec_events.ipc"
+  mode: eval

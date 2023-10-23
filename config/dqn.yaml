@@ -1,0 +1,10 @@
+defaults:
+  - _self_
+  - environment: default
+  - policy: dqn
+  - trainer: dqn_default
+  - logger: default
+  - optimizer: adam
+
+mode: train
+checkpoint: null

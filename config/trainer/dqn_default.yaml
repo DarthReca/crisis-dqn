@@ -1,0 +1,5 @@
+total_timesteps: 2000000
+batch_size: 64
+save_frequency: 100000
+accelerator: cuda:1
+eval_episodes: 9

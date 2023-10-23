@@ -1,0 +1,13 @@
+mode: eval
+checkpoint: null
+policy:
+  eval_epsilon: 0.0
+trainer:
+  accelerator: cuda:1
+  eval_episodes: 7
+environment:
+  test:
+    facts_id: ["008"]
+    text_limit: 300
+    requests_file: data/crisisfacts/trec_events.ipc
+    mode: eval

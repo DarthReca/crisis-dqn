@@ -1,0 +1,9 @@
+gamma: 0.95 # the discount factor gamma
+tau: 1.0 # the target network update rate
+target_network_frequency: 1000 # the frequency of target network updates
+start_e: 1.0 # the starting value for epsilon
+end_e: 0.01 # the ending value for epsilon
+exploration_fraction: 0.25 # the fraction of the total number of steps to perform epsilon decay
+learning_starts: 10000 # the number of steps to perform before starting training
+train_frequency: 10 # the frequency of training
+eval_epsilon: 0.0 # the epsilon value to use during evaluation
