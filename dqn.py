@@ -1,4 +1,5 @@
 # docs and experiment results can be found at https://docs.cleanrl.dev/rl-algorithms/dqn/#dqnpy
+# This file has the CLEANRL_LICENSE
 import argparse
 import datetime
 import logging
