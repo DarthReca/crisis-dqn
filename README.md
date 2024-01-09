@@ -16,8 +16,7 @@
 <summary>Table of Contents</summary>
 
 - [About](#about)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
+- [Dataset](#dataset)
 - [Usage](#usage)
 - [Authors & contributors](#authors--contributors)
 - [License](#license)
@@ -29,26 +28,51 @@
 
 ## About
 
-This is the source code for experiments of **DQNC2S: DQN-based Cross-stream Crisis event Summarizer** paper.
+This is the source code for experiments of **DQNC2S: DQN-based Cross-stream Crisis event Summarizer** paper accepted at **ECIR 2024**.
+
+**The repository is in creation phase, some files could be missing**
+
+## Dataset
 
 The employed dataset is *CrisisFACTS 2022*.
 
 To download the dataset refers to https://github.com/crisisfacts/utilities/tree/main and to the [competition website](https://crisisfacts.github.io/). 
 
-**The repository is in creation phase, some files could be missing**
-
-## Getting Started
-
-### Prerequisites
-
-> **[?]**
-> What are the project requirements/dependencies?
-
 ## Usage
 
-> **[?]**
-> How does one go about using it?
-> Provide various use cases and code examples here.
+The module *environment* contains a Gymnasium Env. It could be used with different frameworks. 
+
+The suggested environment is `SimilarityCrisisEnv`, which include the BERT embedding, max simililarity and remaining space. The following are its attributes:
+
+**Action Space**: `Discrete(2)`
+
+**Observation Space**:  `Box(770, N)`
+
+
+
+The `requests_file` ipc should have the following schema: 
+
+- **('eventID', String)**
+
+- **('requestID', String)**
+
+- **('dateString', String)**
+
+Each files with annotations contained in `data_folder` should have the following schema:
+
+- **('text', String),** the passage
+
+- **('source_type', String)**
+
+- **('unix_timestamp', Int64)**
+
+- **('answer', String)**, the answer to the query given text
+
+- **('score', Float64),**, confidence for the answer
+
+- **('query', String)**, the query 
+
+To better undestand the meaning refers to **CrisisFacts 2022** data. 
 
 ## Authors & contributors
 
@@ -62,8 +86,4 @@ This project is licensed under the **Apache 2.0 license**. See [LICENSE](LICENSE
 
 The project makes use of CleanRL under the **MIT license**. See [CLEANRL_LICENSE](CLEANRL_LICENSE) for more information.
 
-## Acknowledgements
-
-> **[?]**
-> If your work was funded by any organization or institution, acknowledge their support here.
-> In addition, if your work relies on other software libraries, or was inspired by looking at other work, it is appropriate to acknowledge this intellectual debt too.
+# 
