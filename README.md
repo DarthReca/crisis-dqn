@@ -30,19 +30,19 @@
 
 This is the source code for experiments of **DQNC2S: DQN-based Cross-stream Crisis event Summarizer** paper accepted at **ECIR 2024**.
 
-**The repository is in creation phase, some files could be missing**
+**The repository is in the creation phase; some files could be missing**
 
 ## Dataset
 
 The employed dataset is *CrisisFACTS 2022*.
 
-To download the dataset refers to https://github.com/crisisfacts/utilities/tree/main and to the [competition website](https://crisisfacts.github.io/). 
+To download the dataset, refer to https://github.com/crisisfacts/utilities/tree/main and the [competition website](https://crisisfacts.github.io/). 
 
 ## Usage
 
 The module *environment* contains a Gymnasium Env. It could be used with different frameworks. 
 
-The suggested environment is `SimilarityCrisisEnv`, which include the BERT embedding, max simililarity and remaining space. The following are its attributes:
+The suggested environment is `SimilarityCrisisEnv`, which includes the BERT embedding, max similarity, and remaining space. The following are its attributes:
 
 **Action Space**: `Discrete(2)`
 
@@ -58,7 +58,7 @@ The `requests_file` ipc should have the following schema:
 
 - **('dateString', String)**
 
-Each files with annotations contained in `data_folder` should have the following schema:
+Each file with annotations contained in `data_folder` should have the following schema:
 
 - **('text', String),** the passage
 
@@ -72,7 +72,7 @@ Each files with annotations contained in `data_folder` should have the following
 
 - **('query', String)**, the query 
 
-To better undestand the meaning refers to **CrisisFacts 2022** data. 
+To better understand the meaning, refer to **CrisisFacts 2022** data. 
 
 ## Authors & contributors
 
